@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pong Game</title>
+    <!-- <meta charset="UTF-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas" class="hidden"></canvas>
+        <div id="button-container">
+            <button id="start-button">Start</button>
+            <button id="level-button" onclick="window.location.href = 'level.html'">Level</button>
+        </div>
+        <button id="pause-button" class="hidden">Pause</button>
+        <button id="resume-button" class="hidden">Resume</button>
+        <button id="exit-button" class="hidden">Exit</button>
+        <button id="up-button" ontouchend="handleTouchLift('up')" ontouchstart="handleTouch('up')" onmouseup="handleMouseLift('up')"
+            onmousedown="handleClick('up')" class="">Up </button>
+        <button id="down-button" ontouchend="handleTouchLift('down')" ontouchstart="handleTouch('down')" onmouseup="handleMouseLift('down')"
+            onmousedown="handleClick('down')" class="">Down</button>
+    </div>
+    <div id="game-over" class="hidden">
+        <p id="game-over-text"></p>
+        <button id="restart-button" class="hidden">Restart</button>
+        <button id="exit-gameover-button" class="hidden">Exit</button>
+    </div>
+    <audio id="paddle-sound" src="move.mp3"></audio>
+    <audio id="background-music" src="music.mp3" loop autoplay></audio>
+    <audio id="left-wall-sound" src="gameover.mp3"></audio>
+    <script src="script.js"></script>
+    <script src="level.js"></script>
+</body>
+
+</html>
